@@ -1,0 +1,24 @@
+prototype(UpAssist.Neos.Reactions:Component.Molecule.Reaction) < prototype(Neos.Fusion:Component) {
+
+  @context.postIdentifier = ${documentNode.identifier}
+  @context.dimensions = ${documentNode.context.dimensions}
+  containerClass = 'flex'
+  countClass = ''
+  renderer = afx`
+    <div class={props.containerClass} data-reaction-identifier={postIdentifier} data-reaction-dimensions={Json.stringify(dimensions)}>
+      <button data-reaction="like">👍</button>
+      <span data-reaction-count="like" class={props.countClass}></span>
+      <button data-reaction="love">❤️</button>
+      <span data-reaction-count="love" class={props.countClass}></span>
+      <button data-reaction="haha">😂</button>
+      <span data-reaction-count="haha" class={props.countClass}></span>
+      <button data-reaction="wow">😲</button>
+      <span data-reaction-count="wow" class={props.countClass}></span>
+      <button data-reaction="sad">😢</button>
+      <span data-reaction-count="sad" class={props.countClass}></span>
+      <button data-reaction="angry">😡</button>
+      <span data-reaction-count="angry" class={props.countClass}></span>
+    </div>
+    <script src={StaticResource.uri('UpAssist.Neos.Reactions', 'Public/Scripts/Reaction.js')} type="application/javascript"></script>
+  `
+}

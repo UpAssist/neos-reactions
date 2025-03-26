@@ -1,0 +1,11 @@
+privilegeTargets:
+  'Neos\Flow\Security\Authorization\Privilege\Method\MethodPrivilege':
+    'UpAssist.Neos.Reactions:ReactionsApi':
+      matcher: 'method(UpAssist\Neos\Reactions\Controller\ReactionController->(?!initialize).*Action())'
+
+roles:
+  'Neos.Flow:Everybody':
+    privileges:
+      -
+        privilegeTarget: 'UpAssist.Neos.Reactions:ReactionsApi'
+        permission: GRANT

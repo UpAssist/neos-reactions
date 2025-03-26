@@ -1,0 +1,32 @@
+{
+  "name": "upassist.neos.reactions",
+  "version": "0.5.1",
+  "description": "A reactions package for Neos",
+  "main": "index.js",
+  "scripts": {
+    "build:js": "npx babel Resources/Private --out-dir Resources/Public --extensions \".ts\"",
+    "watch:js": "yarn build:js --watch",
+    "release:prerelease": "npx standard-version -t '' -r patch --prerelease && git push --follow-tags",
+    "release:patch": "npx standard-version -t '' -r patch && git push --follow-tags",
+    "release:minor": "npx standard-version -t '' -r minor && git push --follow-tags",
+    "release:major": "npx standard-version -t '' -r major && git push --follow-tags",
+    "release": "yarn docs && yarn release:patch",
+    "docs": "retype build && git add --all && git commit -m 'chore(docs): updated docs'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UpAssist/neos-reactions.git"
+  },
+  "author": "Henjo Hoeksma <henjo@upassist.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/UpAssist/neos-reactions/issues"
+  },
+  "homepage": "https://github.com/UpAssist/neos-reactions/Documentation#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.26.4",
+    "@babel/core": "^7.26.8",
+    "@babel/preset-env": "^7.26.8",
+    "@babel/preset-typescript": "^7.26.0"
+  }
+}

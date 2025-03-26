@@ -1,0 +1,9 @@
+-
+  name: 'Reactions Api'
+  uriPattern: 'api/reactions(/{@action})'
+  defaults:
+    '@package': 'UpAssist.Neos.Reactions'
+    '@controller': 'Reaction'
+    '@action': 'addReaction'
+    '@format': 'html'
+  appendExceedingArguments: TRUE

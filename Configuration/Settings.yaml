@@ -1,0 +1,14 @@
+Neos:
+  Neos:
+    userInterface:
+      translation:
+        autoInclude:
+          UpAssist.Neos.Reactions:
+            - 'NodeTypes/*'
+    fusion:
+      autoInclude:
+        UpAssist.Neos.Reactions: true
+  Flow:
+    mvc:
+      routes:
+        UpAssist.Neos.Reactions: true

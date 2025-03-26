@@ -1,6 +1,6 @@
 {
   "name": "upassist.neos.reactions",
-  "version": "0.6.0",
+  "version": "0.1.0",
   "description": "A reactions package for Neos",
   "main": "index.js",
   "scripts": {
